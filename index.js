@@ -15,10 +15,10 @@ d3.tip = function() {
       point     = null,
       target    = null
 
-  function tip(vis) {
+  function tip(vis, attachNode) {
     svg = getSVGNode(vis)
     point = svg.createSVGPoint()
-    document.body.appendChild(node)
+    (attachNode || document.body).appendChild(node)
   }
 
   // Public - show the tooltip on the screen
